@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+.navbar {
+  padding: 20px 0; 
+  margin-bottom: 0; 
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav > li > a {
+font-weight:bold;
+  line-height: 30px; 
+  padding: 15px 15px;
+  font-family: papyrus;  
+}
+
+.navbar-header .logo {
+  font-size: 40px;
+  color: #f7d8ff;
+  font-family: papyrus;
+}
+
+.row1 {
+  background-color: #f7d8ff; 
+  
+  background: url('image/ba.jpg') no-repeat center center;
+  color:white;
+  height: 650px;
+  padding: 20px; 
+  font-weight: bold;
+  animation: slideInLeft 2s ease-out ;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px;
+  margin-top: -120px;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-family: georgian;
+  padding: 20px; 
+}
+
+.img-responsive {
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  padding-left: 130px;
+  padding-top: 100px;
+}
+
+.row2 {
+  position: relative;
+  font-family: papyrus;
+  height: 680px; 
+  background: url('image/backs.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.row2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+}
+
+.experience-overlay {
+padding-top:30px;
+  position: relative; 
+  z-index: 2;
+ 
+  padding: 15px; 
+  border-radius: 10px;
+  font-family: monaco;
+  height: auto;
+}
+
+.experience-content {
+padding-top:30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between experience items */
+  width: 100%; /* Full width within the overlay */
+  max-width: 650px; /* Adjusted width */
+  margin: 0 auto; /* Centered horizontally */
+
+
+}
+
+.experience-item {
+  background-color: rgba(255, 255, 255, 0.9); 
+  color: #000; /* Text color for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  animation: slideInLeft 6s ease-out infinite;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.row3 {
+  position: relative;
+  font-family: papyrus;
+  height: 700px; 
+  background: url('image/co.png') no-repeat center center;
+  background-size: cover;
+  padding: 20px; 
+  width: 100%;
+  overflow: hidden;
+  font-weight: bold;
+  
+}
+
+
+.skills-overlay {
+
+  height:500px;
+  position: absolute;
+  top: 150px; /* Adjusted top margin */
+  right: 5%; /* Fix content to the right */
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff; 
+  padding: 15px; /* Increased padding */
+  border-radius: 15px;
+  font-family: monaco;
+  width: 70%;
+ 
+  animation: slideInRight 10s infinite; 
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+ 
+}
+
+.skills-content {
+  padding-top:50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between skill items */
+  width: 90%; /* Full width within the overlay */
+  margin: 0 auto; /* Centered horizontally */
+}
+
+.skill-item {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #000; /* Text color for contrast */
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.skill-item h3 {
+  color: #63b8ba; /* Adjust color as needed */
+  font-family: papyrus;
+  
+}
+
+.skill-item meter {
+  width: 80%; /* Full width for meter */
+  height: 20px; /* Adjust height of meter */
+  margin-top: 5px; /* Space above the meter */
+  background-color: #e0e0e0; 
+  border-radius: 5px; /* Rounded corners */
+  
+  animation: pulse 2s infinite; /* Add pulsing animation */
+  
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1) translateX(0); /* Initial state */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateX(10px); /* Scale up and move right */
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translateX(0); /* Back to initial state */
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #c4add5;
+  }
+  50% {
+    background-color: violet;
+  }
+  100% {
+    background-color: #c4add5;
+  }
+}
+
+
+
+
+
+
+.row4 {
+  position: relative;
+  font-family: papyrus;
+  height: 740px; /* Adjust height as needed */
+  background: url('image/cons.png') no-repeat center center;
+  background-size: cover;
+  padding: 20px; /* Optional padding for spacing */
+   padding-top:120px;
+   padding-left:50px;
+}
+
+.row4::before {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 1; /* Ensure it is above the background image */
+}
+
+
+.experience-overlays {
+  
+
+  position: relative; /* Ensure it is above the overlay */
+  z-index: 2; /* Ensure it is above the overlay */
+ padding-top:5px;
+  border-radius: 350px;
+  font-family: monaco;
+  margin-right:10px;
+  font-size:17px;
+  height: 520px;
+
+   
+  animation: pulse 2s infinite;
+}
+
+.experience-contents {
+
+  display: flex;
+  flex-direction: column;
+  gap:10px; /* Space between experience items */
+  width: 100%; /* Full width within the overlay */
+  max-width: 550px; /* Adjusted width */
+  margin: 0 auto; /* Centered horizontally */
+}
+.experience-items {
+  
+  background-color: rgba(0,0,0, 0.6); /* White background for each item */
+  color: white; /* Text color for contrast */
+  padding: 5px;
+  border-radius: 5px;
+  
+}
+
+.row5 {
+  position: relative;
+  font-family: papyrus;
+  height: auto; /* Adjust as needed */
+  background: url('image/pi.png') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  height:735px;
+}
+
+.contact-title {
+  padding-top:70px;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255,255,255, 0.4); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact-form .btn {
+  background-color: #f7d8ff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: #e0baff;
+}
+
+
+
+  </style>
+</head>
+<body>
+<header class="top">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header col-md-2"style="padding-top:25px">
+        <a href="#" class="logo"><strong>Priya T S</strong></a>
+      </div>
+      <div class="col-md-offset-2 col-md-6">
+        <ul class="nav navbar-nav" style="padding-top: 25px;font-size:22px">
+		
+          <li><a href="#" class="active">About me</a></li>
+		  
+          <li><a href="#">Internship</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Certifications</a></li>
+          
+		  <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+	  <div class="col-md-2" style="padding-left:70px;padding-top:12px;color:grey">
+           <h2><strong>Portfolio</strong></h2>
+    </div>
+  </nav>
+</header>
+<main class="row">
+  <section class="row1">
+    <div class="container-fluid">
+      <div class="col-md-offset-1 col-md-6">
+        <p class="subtitle" style="font-family:papyrus;padding-top:50px;font-size:20px"><strong>Hello,</strong></p>
+        <h1 class="title" style="font-family:papyrus;padding-top:40px"><strong>
+          I'm <span>Priya<br />a</span> Full-Stack Web Developer</strong>
+        </h1>
+        <p class="col" style="font-size:20px;padding-top:40px;padding-left:100px;font-family:papyrus">
+          Welcome to my web developer portfolio! I'm Priya ts, a skilled and
+          creative web developer using Java,  Spring Boot,  MySQL, and  Bootstrap with a passion for creating beautiful,
+          responsive, and user-friendly websites. I've worked on a variety of
+          web projects, ranging from personal blogs to food delivery platforms.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <figure style="opacity:0.6;padding-left:30px">
+          <img src="image/pri.jpg" class="img-responsive" style="opacity-*+">
+        </figure>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+   <section class="row2">
+   <div class="col-md-8">
+    <div class="experience-overlay">
+      <h1 style="font-family:papyrus;color:white"><strong>Internships & Trainings</strong></h1>
+      <div class="experience-content" style="padding-top:30px">
+        <div class="experience-item">
+          <h4>Front-end Developer Trainee, ST WHIZ TECHNOLOGIES</h4>
+          <ul>
+            <li><strong>Date:</strong> Mar 2024 - May 2024</li>
+            <li><strong>Location:</strong> Chennai</li>
+            <li><strong>Relevant Coursework:</strong> HTML5; CSS3; Bootstrap; Spring Boot</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h4>Java Programmer Intern, CODSOFT</h4>
+          <ul>
+            <li><strong>Date:</strong> Jan 2024 - Feb 2024</li>
+            <li><strong>Location:</strong> Online</li>
+            <li><strong>Relevant Coursework:</strong> Core Java; MySQL</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h4>Inplant Training, ENGINE FACTORY AVADI</h4>
+          <ul>
+            <li><strong>Date:</strong> June 2023 - July 2023</li>
+            <li><strong>Location:</strong> Chennai</li>
+            <li><strong>Description:</strong>I had a great opportunity to explore the engine mechanisms of armoured vehicles and get hands-on training in the industry and also to develop corporate skills.</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+	</div>
+	
+	
+	
+  </section>
+  
+  
+  
+    <section class="row3"
+	
+  <div class="col-md-offset-5 col-md-7">
+  <h1 style="font-family:papyrus;color:white;font-size:45px;padding-left:90px;padding-top:25px"><strong>Skills</strong></h1>
+    <div class="skills-overlay">
+      
+      <div class="skills-content" >
+        <div class="skill-item">
+          <h3><strong>Web Development</strong></h3>
+          <ul style="color:white;">
+            <li><strong>HTML5       :</strong> <meter value="90" min="0" max="100"></meter></li>
+            <li><strong>CSS3        :</strong> <meter value="85" min="0" max="100"></meter></li>
+            <li><strong>Bootstrap   :</strong> <meter value="75" min="0" max="100"></meter></li>
+          </ul>
+        </div>
+        <div class="skill-item">
+          <h3><strong>Back-End Development</strong></h3>
+          <ul style="color:white;">
+            <li><strong>Java        :  </strong> <meter value="85" min="0" max="100"></meter></li>
+			 <li><strong>MySQL       : </strong> <meter value="75" min="0" max="100"></meter></li>
+            <li><strong>Spring Boot : </strong> <meter value="80" min="0" max="100"></meter></li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+
+
+<section class="row4">
+   <div class="col-md-8">
+    <div class="experience-overlays">
+      <h1 style="font-family:papyrus;padding-left:120px;padding-top:15px"><strong>Certifications</strong></h1>
+      <div class="experience-contents" style="padding-top:30px">
+        <div class="experience-items">
+          
+          <ul>
+                     <li><a href="">NPTEL - Programming in Java (ELITE)</a></li>
+          <li><a href="">NPTEL - VLSI Interconnects</a></li> 
+          </ul>
+        </div>
+		<div class="experience-items">
+          <ul>
+                  <li><a href="" >BOSCH WORKSHOP - Sensors and Actuators</a></li>
+          </ul>
+        </div>
+		<div class="experience-items">
+          <ul>
+                  <li><a href="" >EPICAL LAYOUTS PVT LTD - Cadence Tool Workshop</a></li>
+          </ul>
+        </div>
+        <div class="experience-items">
+
+          <ul>
+		      <li><a href="">Udemy - Internet of Things 201</a></li>
+		  <li><a href="">Udemy - Understanding Body Language</a></li>
+           
+          </ul>
+        </div>
+        <div class="experience-items">
+          <ul>
+                  <li><a href="" >Great Learning - Front-end Developement</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+	</div>
+	
+	
+	
+  </section>
+  
+  
+  
+  
+
+
+
+<section class="row5">
+  <div class="container">
+    <h1 class="contact-title" style="color:white">Contact Me</h1>
+    <form class="contact-form" style="padding-top:30px">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</body>
+</html>
